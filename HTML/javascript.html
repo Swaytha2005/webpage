@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inner{
+            height:200px;
+            width:200px;
+            background-color: blue;
+            background-size: cover;
+            margin:10px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width:45%;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div onclick="fun(0)" id="demo1" class="inner"></div>
+        <div onclick="fun(1)" id="demo2" class="inner"></div>
+        <div onclick="fun(2)" id="demo3" class="inner"></div>
+        <div onclick="fun(3)" id="demo4" class="inner"></div>
+        <div onclick="fun(4)" id="demo5" class="inner"></div>
+        <div onclick="fun(5)" id="demo6" class="inner"></div>
+        <div onclick="fun(6)" id="demo7" class="inner"></div>
+        <div onclick="fun(7)" id="demo8" class="inner"></div>
+        <div onclick="fun(8)" id="demo9" class="inner"></div>
+    </div>
+    <script>
+        var myarr=["-","-","-","-","-","-","-","-","-"]
+        var player = 'player1';
+        function fun(i){
+            if(myarr[i]=="-"){
+                if(player==='player1'){
+                    document.getElementsByClassName("inner")[i].style.backgroundImage="url('https://static.vecteezy.com/system/resources/previews/004/223/162/non_2x/dirty-grunge-hand-drawn-with-brush-strokes-cross-x-illustration-isolated-on-white-background-mark-graphic-design-check-mark-symbol-no-button-for-vote-in-check-box-web-etc-free-vector.jpg')";
+                    myarr[i]="player1";
+                }
+                else{
+                    myarr[i]="player2";
+                    document.getElementsByClassName("inner")[i].style.backgroundImage="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJNiqTo8Q9o6Nmbo8kCZbZAcoJ_IuyHcPVBQ&usqp=CAU')";
+                }
+            if(myarr[0]==player && myarr[1]==player && myarr[2]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[3]==player && myarr[4]==player && myarr[5]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[6]==player && myarr[7]==player && myarr[8]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[2]==player && myarr[5]==player && myarr[8]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[0]==player && myarr[3]==player && myarr[6]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[0]==player && myarr[4]==player && myarr[8]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[2]==player && myarr[4]==player && myarr[6]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+            if(myarr[2]==player && myarr[4]==player && myarr[8]==player){
+                document.body.style.backgroundImage="url('https://img.itch.zone/aW1hZ2UvNDc4NTkvMjExMjY5LmdpZg==/original/iEdCFj.gif')";
+                alert("winner "+player);
+            }
+                playerswitch();
+            }
+        }
+        function playerswitch(){
+            if(player=="player1"){
+                player="player2";
+            }
+            else{
+                player="player1";
+            }
+        }
+    </script>
+</body>
+</html>

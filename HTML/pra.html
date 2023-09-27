@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Product Details</legend>
+        <form name="myform" id="form">
+            <label for="pname">Product Name:</label>
+            <input id="pname" name="pname" type="text">
+            <br><br>
+            <label for="price">Price:</label>
+            <input id="price" name="price" type="number">
+            <br><br>
+            <label for="quantity">Quantity:</label>
+            <input id="quantity" name="quantity" type="number">
+            <br><br>
+            <input type="submit">
+        </form>
+    </fieldset>
+    <table style="width:50%;border-collapse:collapse;" border="1">
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total amount</th> 
+        </tr>
+        <tr>
+            <td id="demo1"></td>
+            <td id="demo2"></td>
+            <td id="demo3"></td>
+            <td id="demo4"></td>
+        </tr>
+    </table>
+    <script>
+        var a=document.getElementById("form");
+        a.addEventListener('submit',function(event){
+            event.preventDefault();
+            var n=document.forms["myform"]["pname"].value;
+            document.getElementById("demo1").innerHTML+=n+"<br>";
+            var p=document.forms["myform"]["price"].value;
+            document.getElementById("demo2").innerHTML+=p+"<br>";
+            var q=document.forms["myform"]["quantity"].value;
+            document.getElementById("demo3").innerHTML+=q+"<br>";
+            document.getElementById("demo4").innerHTML+=p*q+"<br>";
+            a.reset();
+        });
+    </script>
+</body>
+</html>

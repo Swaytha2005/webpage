@@ -1,0 +1,40 @@
+body{
+    margin:0;
+}
+#container{
+    background-image: url('https://img.freepik.com/free-vector/monochromatic-hand-painted-background-with-drawn-nature-elements_52683-63007.jpg?size=626&ext=jpg&ga=GA1.1.313333961.1683127316&semt=ais');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+    position:absolute;
+    padding:80px;
+    border:1px solid none;
+    box-sizing: border-box;
+}
+#inner-container{
+    background-image:url('https://marketplace.canva.com/EAFM8rXgdjs/1/0/1600w/canva-cute-pastel-watercolor-pink-flower-linktree-background-3jWqnzaUJCo.jpg');
+    height:75%;
+    width:90%;
+    position:absolute;
+    border: 1px solid none;
+    box-shadow: 5px 5px 5px gray;
+    padding:0;
+}
+#main{
+    display:flex;
+    float:right;
+}
+.top{
+    padding:20px;
+    color:hotpink;
+}
+.top:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+div h1{
+    color:rgb(252, 171, 185);
+    text-align: center;
+    text-shadow: 5px 5px 1px grey;
+}

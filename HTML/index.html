@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" style="width:50%">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>SecretIdentity</th>
+            <th>Powers</th>
+        </tr>
+        <tr>
+            <td id="demo"></td>
+            <td id="demo1"></td>
+            <td id="demo2"></td>
+            <td id="demo3"></td>
+        </tr>
+    </table>
+    <script>
+        fetch("./member.json")
+        .then(response => response.json())  
+        .then(data=>{ 
+            let jsondata=data.members;
+            for(let i=0;i<jsondata.length;i++){
+                    document.getElementById("demo").innerHTML="hi";
+                   
+                    document.getElementById("demo1").innerHTML=jsondata[i]['age']+"<br>";
+                  
+                    document.getElementById("demo2").innerHTML=jsondata[i]['secretIdentity']+"<br>";
+              
+                    document.getElementById("demo3").innerHTML=jsondata[i]['name']+"<br>";
+                }
+            }
+     
+        )  
+    </script>
+</body>
+</html>
